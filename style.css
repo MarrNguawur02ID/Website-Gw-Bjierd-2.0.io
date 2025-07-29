@@ -59,6 +59,7 @@ h1, h2, h3, h4 {
 }
 
 .section {
+    background-color: #ffffff;
     min-height: 100vh;
     padding: 100px 0;
     opacity: 0;
