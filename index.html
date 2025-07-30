@@ -1,101 +1,222 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Saya</title>
+    <title>Biodata Marriadi Indra</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Biodata Saya</h1>
-        <img src="Images/IMG_20250620_065807_105.webp" alt="Foto Profil" class="profile-pic">
-    </header>
+    <div class="intro-animation"></div>
     
-    <nav>
-        <ul>
-            <li><a href="#biodata">Biodata</a></li>
-            <li><a href="#hobi">Hobi</a></li>
-            <li><a href="#education">Pendidikan</a></li>
-            <li><a href="#games">Game yang Ditamatkan</a></li>
-            <li><a href="#anime">Anime yang Ditonton</a></li>
-            <li><a href="#social-media">Media Sosial</a></li>
-        </ul>
-    </nav>
-
-    <section id="biodata">
-        <h2>Biodata</h2>
-        <p>Nama: [Nama Anda]</p>
-        <p>Tanggal Lahir: [Tanggal Lahir]</p>
-        <p>Alamat: [Alamat]</p>
-        <p>Warna Favorit: [Warna Favorit]</p>
-        <p>Makanan dan Minuman Favorit: [Makanan dan Minuman Favorit]</p>
-        <p>Tentang Saya: [Ceritakan tentang diri Anda]</p>
-    </section>
-
-    <section id="hobi">
-        <h2>Hobi</h2>
-        <div class="bar-chart">
-            <div class="bar" style="height: 80%;">80%</div>
-            <div class="bar" style="height: 60%;">60%</div>
-            <div class="bar" style="height: 40%;">40%</div>
-            <div class="bar" style="height: 20%;">20%</div>
+    <header>
+        <div class="container">
+            <h1 class="logo">My<span>Biodata</span></h1>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#biodata" class="nav-link">Biodata</a></li>
+                    <li><a href="#hobi" class="nav-link">Hobi</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#games" class="nav-link">Games</a></li>
+                    <li><a href="#anime" class="nav-link">Anime</a></li>
+                    <li><a href="#sosmed" class="nav-link">Sosmed</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <section id="education">
-        <h2>Pendidikan</h2>
-        <ul>
-            <li>SD: [Nama SD]</li>
-            <li>SMP: [Nama SMP]</li>
-            <li>SMK: [Nama SMK]</li>
-        </ul>
-    </section>
+    <main class="container">
+        <section id="biodata" class="section">
+            <div class="profile-container">
+                <div class="profile-img zoomable">
+                    <img src="Images/IMG_20250620_065807_105.webp" alt="Just Photo Profile" id="profile-pic">
+                </div>
+                <div class="profile-info">
+                    <h2>About Me</h2>
+                    <p>Haii! Aku seorang Gen Z yang suka banget sama anime, game, dan coding. Aku lahir di era digital dan tumbuh bersama teknologi. Aku suka eksplor hal-hal baru dan selalu penasaran dengan perkembangan terbaru di dunia tech dan pop culture :v.</p>
+                    
+                    <div class="bio-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Nama Lengkap</span>
+                            <span class="detail-value">Marriadi Indra</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">TTL</span>
+                            <span class="detail-value">Jakarta, 30 Oktober 2007</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Alamat</span>
+                            <span class="detail-value">Baleendah, Kab.Bandung, Jawa Barat</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Warna Favorit</span>
+                            <span class="detail-value">Hytam Legam 😹☕️👍🏻😁🔥</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Makanan Favorit</span>
+                            <span class="detail-value">Mie Goreng</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Minuman Favorit</span>
+                            <span class="detail-value">Es Teh Patipum 😋🤤🥵🤯🤏</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Zodiak</span>
+                            <span class="detail-value">Astagfirullah Zodiac Is Haram😠</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">MBTI</span>
+                            <span class="detail-value">ESFJ-T</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="games">
-        <h2>Game yang Ditamatkan</h2>
-        <ul>
-            <li>Harvest Moon: Back to Nature</li>
-            <li>Harvest Moon: Hero of Leaf Valley</li>
-            <li>Dissidia Final Fantasy</li>
-            <li>GTA San Andreas</li>
-            <li>GTA Liberty City Stories</li>
-            <li>GTA Vice City Stories</li>
-            <li>God Of War 2</li>
-        </ul>
-    </section>
+        <section id="hobi" class="section">
+            <h2>Hobi & Skills</h2>
+            <div class="hobbies-container">
+                <div class="hobby-item">
+                    <h3>Gaming</h3>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 100%">100%</div>
+                    </div>
+                </div>
+                <div class="hobby-item">
+                    <h3>Nonton Anime</h3>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 80%">80%</div>
+                    </div>
+                </div>
+                <div class="hobby-item">
+                    <h3>Coding</h3>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 60%">60%</div>
+                    </div>
+                </div>
+                <div class="hobby-item">
+                    <h3>Baca Manga</h3>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 30%">30%</div>
+                    </div>
+                </div>
+                <div class="hobby-item">
+                    <h3>Main Musik</h3>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 75%">75%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="anime">
-        <h2>Anime yang Ditonton</h2>
-        <ul>
-            <li>Tokyo Ghoul</li>
-            <li>K-on</li>
-            <li>Akame Ga Kill</li>
-            <li>Gotoubun no Hanayome 1&2</li>
-            <li>God Eater</li>
-            <li>No Game No Life</li>
-            <li>Oshi no Ko S1</li>
-            <li>Shikanoko Nokonoko Koshitantan</li>
-            <li>Nichijou</li>
-        </ul>
-    </section>
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2021</div>
+                    <div class="timeline-content">
+                        <h3>SDN Jati 2</h3>
+                        <p>Lulus dengan nilai: ???(Pindah)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>MTS Kharisma Nusantara</h3>
+                        <p>Lulus dengan nilai: ???</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Sekarang</div>
+                    <div class="timeline-content">
+                        <h3>SMK Bppi Baleendah</h3>
+                        <p>Jurusan Teknik Jaringan Komputer dan Telekomunikasi, Lulus dengan nilai: ???(Masih Kelas 12:v)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="social-media">
-        <h2>Media Sosial</h2>
-        <ul>
-            <li><a href="[Link Youtube]"><img src="youtube_icon.png" alt="Youtube"></a></li>
-            <li><a href="[Link Instagram]"><img src="instagram_icon.png" alt="Instagram"></a></li>
-            <li><a href="[Link WhatsApp]"><img src="whatsapp_icon.png" alt="WhatsApp"></a></li>
-            <li><a href="mailto:[Email Anda]"><img src="email_icon.png" alt="Email"></a></li>
-            <li><a href="[Link Github]"><img src="github_icon.png" alt="Github"></a></li>
-            <li><a href="[Link Blogspot]"><img src="blogspot_icon.png" alt="Blogspot"></a></li>
-        </ul>
-    </section>
+        <section id="games" class="section">
+            <h2>Games Completed</h2>
+            <div class="list-container">
+                <ul class="styled-list">
+                    <li>Harvest Moon: Back To Nature</li>
+                    <li>Harvest Moon: Hero Of Leaf Valley</li>
+                    <li>Harvest Moon: Friends Of Mineral Town 
+                    <li>Dissidia Final Fantasy</li>
+                    <li>GTA San Andreas</li>
+                    <li>GTA Liberty City Stories</li>
+                    <li>GTA Vice City Stories</li>
+                    <li>God of War 2</li>
+                    <li>God Of War Chains Of Olympus</li>
+                    <li>God Of War Ghost Of Sparta</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="anime" class="section">
+            <h2>Anime Watched</h2>
+            <div class="list-container">
+                <ul class="styled-list">
+                    <li>Tokyo Ghoul</li>
+                    <li>K-on!</li>
+                    <li>Akame Ga Kill</li>
+                    <li>Gotoubun no Hanayome Season 1 & 2</li>
+                    <li>God Eater</li>
+                    <li>No Game No Life</li>
+                    <li>Oshi no Ko Season 1</li>
+                    <li>Shikanoko Nokonoko Koshitantan</li>
+                    <li>Nichijou</li>
+                    <li>Honey Lemon Soda</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sosmed" class="section">
+            <h2>Connect With Me</h2>
+            <div class="social-container">
+                <a href="https://youtube.com/@gamenesiaplays?si=GOSLTVwWU6gEyVOA" class="social-link zoomable" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    <span>My Channel YouTube</span>
+                </a>
+                <a href="https://www.instagram.com/marr_02_m0th3rb0ard?igsh=MWdzanpoNzZqb2oxNQ==" class="social-link zoomable" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>My Instagram</span>
+                </a>
+                <a href="https://www.instagram.com/m0nsya._?igsh=MWhlZHk1eDF4YmY5" class="social-link zoomable" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>My Girl Instagram</span>
+                </a>
+                <a href="Whatsapp.me/0897654321" class="social-link zoomable" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>My WhatsApp Number</span>
+                </a>
+                <a href="mailto:marriadiindra16@gmail.com" class="social-link zoomable" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>My Email</span>
+                </a>
+                <a href="github.com/MarrNguawur02ID" class="social-link zoomable" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>My GitHub</span>
+                </a>
+                <a href="https://randommyborringmarr2.blogspot.com/2024/04/top-7-game-play-store-penghilang-gabut.html" class="social-link zoomable" target="_blank">
+                    <i class="fab fa-blogger"></i>
+                    <span>My Blogspot</span>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <button id="toggle-theme">Toggle Mode</button>
+        <div class="container">
+            <p>&copy; 2025 Biodata Singkat Gwehj🗿☕️😋😁👍🏻| Made with Marriadi Indrä<i class="fas fa-heart"></i> by Gen Z</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
+                        </html>
