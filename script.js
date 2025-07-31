@@ -49,27 +49,69 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Animate progress bars when they come into view
-    const animateOnScroll = () => {
-        const bars = document.querySelectorAll('.bar');
+    // Track scroll direction for hobby bars
+    let lastScrollPosition = window.pageYOffset;
+    let scrollDirection = 'down';
+    
+    const handleScrollDirection = () => {
+        const currentScrollPosition = window.pageYOffset;
         
-        bars.forEach(bar => {
+        if (currentScrollPosition > lastScrollPosition) {
+            scrollDirection = 'down';
+        } else {
+            scrollDirection = 'up';
+        }
+        
+        lastScrollPosition = currentScrollPosition;
+    };
+    
+    // Animate progress bars with directional effect
+    const animateBarsOnScroll = () => {
+        const bars = document.querySelectorAll('.hobby-item');
+        const windowHeight = window.innerHeight;
+        
+        bars.forEach((bar, index) => {
             const barPosition = bar.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
+            const barVisible = barPosition < windowHeight * 0.8;
             
-            if (barPosition < screenPosition) {
-                const width = bar.style.width;
-                bar.style.width = '0';
+            if (barVisible) {
+                // Delay each bar slightly for staggered effect
+                const delay = index * 100;
+                
                 setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
+                    if (scrollDirection === 'down') {
+                        bar.style.transform = 'translateX(-20px)';
+                        setTimeout(() => {
+                            bar.style.transform = 'translateX(0)';
+                            bar.querySelector('.bar').style.width = bar.querySelector('.bar').getAttribute('data-width');
+                        }, 300);
+                    } else {
+                        bar.style.transform = 'translateX(20px)';
+                        setTimeout(() => {
+                            bar.style.transform = 'translateX(0)';
+                            bar.querySelector('.bar').style.width = bar.querySelector('.bar').getAttribute('data-width');
+                        }, 300);
+                    }
+                }, delay);
             }
         });
     };
     
-    // Run once on load and then on scroll
-    animateOnScroll();
-    window.addEventListener('scroll', animateOnScroll);
+    // Initialize bar widths
+    document.querySelectorAll('.bar').forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        bar.setAttribute('data-width', width);
+    });
+    
+    // Run scroll handlers
+    window.addEventListener('scroll', () => {
+        handleScrollDirection();
+        animateBarsOnScroll();
+    });
+    
+    // Run once on load
+    animateBarsOnScroll();
     
     // Zoom effect for all elements with zoomable class
     document.querySelectorAll('.zoomable').forEach(element => {
