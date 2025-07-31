@@ -1,21 +1,21 @@
 /* Base Styles */
 :root {
-    primary-color: #6c5ce7;
-    secondary-color: #a29bfe;
-    text-color: #2d3436;
-    bg-color: #f5f6fa;
-    card-bg: #ffffff;
-    shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --text-color: #2d3436;
+    --bg-color: #f5f6fa;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
 }
 
 [data-theme="dark"] {
-    primary-color: #a29bfe;
-    secondary-color: #6c5ce7;
-    text-color: #f5f6fa;
-    bg-color: #2d3436;
-    card-bg: #1e272e;
-    shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --primary-color: #a29bfe;
+    --secondary-color: #6c5ce7;
+    --text-color: #f5f6fa;
+    --bg-color: #2d3436;
+    --card-bg: #1e272e;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -27,7 +27,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
-    color: var(text-color);
+    color: var(--text-color);
     line-height: 1.6;
     transition: var(--transition);
     opacity: 0;
@@ -49,12 +49,12 @@ body {
 
 /* Header Styles */
 header {
-    background-color: var(card-bg);
-    box-shadow: var(shadow);
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
-    transition: var(transition);
+    transition: var(--transition);
 }
 
 header .container {
@@ -67,11 +67,11 @@ header .container {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(primary-color);
+    color: var(--primary-color);
 }
 
 .logo span {
-    color: var(text-color);
+    color: var(--text-color);
 }
 
 nav ul {
@@ -85,32 +85,32 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(text-color);
+    color: var(--text-color);
     font-weight: 500;
-    transition: var(transition);
+    transition: var(--transition);
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 nav ul li a:hover {
-    background-color: var(primary-color);
+    background-color: var(--primary-color);
     color: white;
 }
 
 #theme-toggle {
     background: none;
     border: none;
-    color: var(text-color);
+    color: var(--text-color);
     font-size: 1.2rem;
     cursor: pointer;
-    transition: var(transition);
+    transition: var(--transition);
     padding: 5px;
     border-radius: 50%;
 }
 
 #theme-toggle:hover {
     transform: rotate(30deg);
-    color: var(primary-color);
+    color: var(--primary-color);
 }
 
 /* Section Styles */
@@ -126,7 +126,7 @@ nav ul li a:hover {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: var(primary-color);
+    color: var(--primary-color);
     position: relative;
     display: inline-block;
 }
@@ -138,7 +138,7 @@ nav ul li a:hover {
     left: 0;
     width: 50px;
     height: 3px;
-    background-color: var(primary-color);
+    background-color: var(--primary-color);
 }
 
 /* Profile Section */
@@ -154,8 +154,8 @@ nav ul li a:hover {
     min-width: 300px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(shadow);
-    transition: var(transition);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
 .profile-img img {
@@ -182,11 +182,11 @@ nav ul li a:hover {
 }
 
 .detail-item {
-    background-color: var(card-bg);
+    background-color: var(--card-bg);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: var(shadow);
-    transition: var(transition);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
 .detail-item:hover {
@@ -196,7 +196,7 @@ nav ul li a:hover {
 .detail-label {
     display: block;
     font-weight: 600;
-    color: var(primary-color);
+    color: var(--primary-color);
     margin-bottom: 5px;
     font-size: 0.9rem;
 }
@@ -230,7 +230,7 @@ nav ul li a:hover {
 
 .bar {
     height: 30px;
-    background-color: var(primary-color);
+    background-color: var(--primary-color);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -255,7 +255,7 @@ nav ul li a:hover {
     left: 50px;
     height: 100%;
     width: 2px;
-    background-color: var(primary-color);
+    background-color: var(--primary-color);
 }
 
 .timeline-item {
@@ -270,7 +270,7 @@ nav ul li a:hover {
     top: 0;
     width: 80px;
     padding: 5px;
-    background-color: var(primary-color);
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     border-radius: 5px;
@@ -278,23 +278,23 @@ nav ul li a:hover {
 }
 
 .timeline-content {
-    background-color: var(card-bg);
+    background-color: var(--card-bg);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: var(shadow);
+    box-shadow: var(--shadow);
 }
 
 .timeline-content h3 {
     margin-bottom: 10px;
-    color: var(primary-color);
+    color: var(--primary-color);
 }
 
 /* List Sections */
 .list-container {
-    background-color: var(card-bg);
+    background-color: var(--card-bg);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: var(shadow);
+    box-shadow: var(--shadow);
     max-width: 800px;
     margin: 0 auto;
 }
@@ -314,7 +314,7 @@ nav ul li a:hover {
     content: '▶';
     position: absolute;
     left: 0;
-    color: var(primary-color);
+    color: var(--primary-color);
 }
 
 /* Social Media Section */
@@ -331,18 +331,18 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(card-bg);
+    background-color: var(--card-bg);
     padding: 20px;
     border-radius: 10px;
     text-decoration: none;
-    color: var(text-color);
-    box-shadow: var(shadow);
-    transition: var(transition);
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
 .social-link:hover {
     transform: translateY(-5px);
-    background-color: var(primary-color);
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -355,7 +355,7 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: var(card-bg);
+    background-color: var(--card-bg);
     margin-top: 50px;
 }
 
@@ -409,4 +409,4 @@ footer p {
     .social-container {
         grid-template-columns: 1fr;
     }
-}
+    }
