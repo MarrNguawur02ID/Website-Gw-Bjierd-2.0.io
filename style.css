@@ -241,6 +241,20 @@ nav ul li a:hover {
     transition: width 1.5s ease;
 }
 
+.hobby-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.hobby-item.animated {
+    opacity: 1;
+    transform: translateX(0) !important;
+}
+
+.bar {
+    transition: width 1s ease 0.3s !important;
+}
+
 /* Education Section */
 .timeline {
     position: relative;
