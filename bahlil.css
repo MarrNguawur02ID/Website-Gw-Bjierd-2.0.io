@@ -156,6 +156,8 @@ nav ul li a:hover {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    pointer-events:none;
+    user-select:none;
 }
 
 .profile-img img {
