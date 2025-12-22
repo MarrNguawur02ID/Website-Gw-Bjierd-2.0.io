@@ -1,4 +1,9 @@
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+
 document.addEventListener('DOMContentLoaded', function() {
+    
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const icon = themeToggle.querySelector('i');
