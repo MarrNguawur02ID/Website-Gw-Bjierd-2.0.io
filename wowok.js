@@ -1,7 +1,3 @@
-<script>
-document.addEventListener('contextmenu', event => event.preventDefault());
-</script>
-
 document.addEventListener('DOMContentLoaded', function() {
     
     // Theme Toggle
