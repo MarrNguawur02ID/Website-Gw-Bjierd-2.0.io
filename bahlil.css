@@ -151,7 +151,7 @@ nav ul li a:hover {
 
 .profile-img {
     flex: 1;
-    min-width: 315px;
+    min-width: 300px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -161,8 +161,8 @@ nav ul li a:hover {
 }
 
 .profile-img img {
-    width: 115%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: block;
 }
 
